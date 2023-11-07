@@ -85,4 +85,16 @@ ruta.post("/login", async (req, res) => {
   }
 });
 
+ruta.get('/artesanos', function(req, res) {
+  res.render('artesanos');
+});
+
+ruta.get('/acerca', function(req, res) {
+  res.render('acerca');
+});
+
+ruta.get('/Perfil', function(req, res) {
+  res.render('users/perfil');
+});
+
 module.exports = ruta;
