@@ -1,0 +1,47 @@
+/* Estilos para la vista de perfil */
+* {
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    width: 70%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .perfil-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .perfil-info h1 {
+    font-size: 24px;
+  }
+  
+  .perfil-info p {
+    font-size: 16px;
+    color: #555555;
+    margin: 5px 0;
+  }
+  
+  /* Añade cualquier otro estilo adicional según tus preferencias */
+  

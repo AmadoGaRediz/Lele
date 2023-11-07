@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/web/css/perfil.css"> <!-- Asegúrate de que la ruta al archivo CSS sea correcta -->
     <title>Perfil de Usuario</title>
 </head>
 <body>
-    <h1>Perfil de Usuario</h1>
-    <% if (user) { %>
-        <p><strong>ID de Usuario:</strong> <%= user.id %></p>
-        <p><strong>Nombre:</strong> <%= user.nombre %></p>
-        <p><strong>Usuario:</strong> <%= user.usuario %></p>
-        <p><strong>Edad:</strong> <%= user.edad %></p>
-        <p><strong>Correo Electrónico:</strong> <%= user.correo %></p>
-        <p><strong>Tipo de Usuario:</strong> <%= user.tipo %></p>
-        <img src="<%= user.foto %>" alt="Foto de Perfil" width="200">
-    <% } else { %>
-        <p>Usuario no encontrado.</p>
-    <% } %>
+    <%- include("../templates/encabezado") %>
+
+    <div class="perfil-container">
+        <% if (user) { %>
+            <div class="perfil-picture">
+                <img src="<%= user.foto %>" alt="Foto de Perfil">
+            </div>
+            <div class="perfil-info">
+                <h1><%= user.nombre %></h1>
+                <p><strong>ID de Usuario:</strong> <%= user.id %></p>
+                <p><strong>Nombre de Usuario:</strong> <%= user.usuario %></p>
+                <p><strong>Edad:</strong> <%= user.edad %></p>
+                <p><strong>Correo Electrónico:</strong> <%= user.correo %></p>
+                <p><strong>Tipo de Usuario:</strong> <%= user.tipo %></p>
+            </div>
+        <% } else { %>
+            <p>Usuario no encontrado.</p>
+        <% } %>
+    </div>
 </body>
 </html>

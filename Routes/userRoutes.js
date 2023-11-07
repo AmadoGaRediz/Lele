@@ -93,8 +93,20 @@ ruta.get('/acerca', function(req, res) {
   res.render('acerca');
 });
 
-ruta.get('/Perfil', function(req, res) {
-  res.render('users/perfil');
+
+ruta.get("/perfil/:id", function (req, res) {
+  
+  const user = buscarporID(req.user);
+
+  if (user) {
+    res.render("users/perfil", { user }); 
+  } else {
+    res.status(404).send("Usuario no encontrado.");
+  }
 });
+
+
+
+
 
 module.exports = ruta;
